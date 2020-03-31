@@ -18,9 +18,41 @@ javadoc -doclet com.marklux.doclet.JsonDoclet -sourcepath xxx -subpackages com.x
 
 ## 通过maven插件集成(推荐)
 
-```xml
+在指定的module中引入插件并配置参数：
 
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>com.marklux</groupId>
+            <artifactId>json-doclet.plugin</artifactId>
+            <version>1.0</version>
+            <configuration>
+                <sourcePath>demo/src/main/java</sourcePath>
+                <subPackage>com.alibaba</subPackage>
+                <encoding>UTF-8</encoding>
+                <outputpath>demo/src/main/resources</outputpath>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>package</id>
+                    <goals>
+                        <goal>package</goal>
+                    </goals>
+                    <phase>package</phase>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+    </build>
 ```
+
+配置说明
+
+- sourcePath 配置扫描源码的source path
+- subPackage 子包
+- encoding 源码的编码
+- outputpath 输出json文件的目录
 
 ## JSON格式示范
 
