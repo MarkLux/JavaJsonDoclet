@@ -18,6 +18,10 @@ javadoc -doclet com.marklux.doclet.JsonDoclet -sourcepath xxx -subpackages com.x
 
 ## 通过maven插件集成(推荐)
 
+```xml
+
+```
+
 ## JSON格式示范
 
 ```json
