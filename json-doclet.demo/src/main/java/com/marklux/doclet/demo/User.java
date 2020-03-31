@@ -1,11 +1,14 @@
 package com.marklux.doclet.demo;
 
+import com.marklux.doclet.annotation.Model;
+
 import java.util.List;
 
 /**
  * 用户模型
  * @author lumin
  */
+@Model(namespace = "com.marklux.test", name = "user")
 public class User {
 
     /**

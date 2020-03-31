@@ -11,5 +11,11 @@
 
     <artifactId>json-doclet.demo</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.marklux</groupId>
+            <artifactId>json-doclet.doclet</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>
